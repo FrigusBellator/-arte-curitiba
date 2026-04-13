@@ -21,7 +21,8 @@ export default function HomeScreen({ onNavigate }) {
           <h3 className="text-3xl font-black text-[#0B132B] mb-6">O Mosaico</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[400px]">
             <div className="md:col-span-2 md:row-span-2 relative overflow-hidden bg-[#FF7F50] rounded-[30px_80px_30px_10px] p-6 flex items-end cursor-pointer" onClick={() => onNavigate('agenda')}>
-               <div className="absolute inset-0 bg-[url('[https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1000](https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1000)')] bg-cover bg-center mix-blend-overlay opacity-60"></div>
+               {/* CORREÇÃO DO BUILD AQUI: Imagem via style inline */}
+               <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-60" style={{ backgroundImage: "url('[https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1000](https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1000)')" }}></div>
                <div className="relative z-20"><span className="bg-white text-[#0B132B] text-xs font-bold px-3 py-1 rounded-full mb-2 inline-block">Agenda</span><h4 className="text-2xl font-bold text-white">Ver Agenda Completa</h4></div>
             </div>
              <div className="md:col-span-2 md:row-span-1 relative bg-[#FFDB58] rounded-[10px_20px_60px_20px] p-5 flex items-end cursor-pointer" onClick={() => onNavigate('event')}>
